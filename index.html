@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="stickyfooter" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta content="nw520" name="author" />
+<meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport" />
+<title>WikiOSMerged &laquo; Wikidata Tools</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous" />
+<link rel="stylesheet" href="data/css/style.css" />
+<link rel="stylesheet" href="data/components/tooltipster/4.0/css/tooltipster.bundle.min.css" />
+<link rel="stylesheet" href="data/components/tooltipster/4.0/css/plugins/tooltipster/sideTip/themes/tooltipster-sideTip-light.min.css" />
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<a class="navbar-brand" href="#">WikiOSMerged</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarToggler">
+		<ul class="nav navbar-nav">
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navitem-tools" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More Wikidata tools</a>
+				<div class="dropdown-menu" aria-labelledby="navitem-tools">
+					<a class="dropdown-item" href="https://muekoeff.github.io/wikicompare/" rel="noopener">WikiCompare</a>
+					<a class="dropdown-item" href="https://muekoeff.github.io/wikirsolve/" rel="noopener">WikiRsolve</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</nav>
+<main class="container">
+	<div id="rowTable">
+		<div class="row">
+			<textarea id="commands" class="form-control" rows="10"></textarea>
+		</div>
+		<br />
+		<div class="row">
+			<button id="button-parse" class="btn btn-primary" disabled>Go</button>&nbsp;
+			<div style="align-items:center;display:flex;margin-left:2em">
+				<p style="margin:0">Please enter one Wikidata ID per line The first one will be used as reference</p>
+			</div>
+		</div>
+	</div>
+	<div id="rowTable" style="margin-top:1.5em">
+		<div class="row">
+			<h3>Data</h3>
+		</div>
+		<div class="row">
+			<table id="table-output" class="table table-striped" role="grid">
+				<thead>
+					<tr role="row">
+						<th scope="col">#</th>
+						<th scope="col">Status</th>
+						<th scope="col">Wikidata-Id</th>
+						<th scope="col">OSM-Ids</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="4">No data</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</main>
+<footer class="footer">
+	<div class="container text-right">
+		<span class="text-muted">
+			Tool made by <a href="https://muekoeff.de/" target="_blank" rel="noopener">nw520</a> <small>(<a href="https://www.wikidata.org/wiki/User:Nw520" target="_blank" rel="noopener">@ Wikidata</a>)</small>.<br/>
+			<a href="https://github.com/muekoeff/wikiosmerged" target="_blank" rel="noopener">Source code @ GitHub</a> &bull; <a href="https://github.com/muekoeff/wikiosmerged/issues" target="_blank" rel="noopener">Report bugs @ GitHub</a>
+		</span>
+	</div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="data/components/tooltipster/4.0/js/tooltipster.bundle.min.js"></script>
+<script src="data/js/utils.js"></script>
+<script src="data/js/requestQueue.js"></script>
+<script src="data/js/script.js"></script>
+</body>
+</html>
